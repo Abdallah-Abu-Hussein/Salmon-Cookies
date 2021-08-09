@@ -1,0 +1,14 @@
+* {
+    font-family: Arial, sans-serif;
+  }
+  img {
+    width: 100px;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid red;
+  }
+  #hi {
+    color: red;
+  }
