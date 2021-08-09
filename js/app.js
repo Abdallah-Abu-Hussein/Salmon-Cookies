@@ -16,7 +16,7 @@ let seattle_shop  = {
 
 
     make_randoms: function (){
-     return  Math.floor(Math.random() * 70);
+     return  Math.floor(Math.random() * (this.max_hourly_customers - this.min_hourly_customers + 1) + this.min_hourly_customers);
     } ,
 
     simulate_cookies_sales : function(){
@@ -68,7 +68,7 @@ let seattle_shop  = {
 
 
     make_randoms: function (){
-     return  Math.floor(Math.random() * 24);
+     return  Math.floor(Math.random() * (this.max_hourly_customers - this.min_hourly_customers + 1) + this.min_hourly_customers);
     } ,
 
     simulate_cookies_sales : function(){
@@ -120,7 +120,7 @@ let seattle_shop  = {
 
 
     make_randoms: function (){
-     return  Math.floor(Math.random() * 38);
+     return  Math.floor(Math.random() * (this.max_hourly_customers - this.min_hourly_customers + 1) + this.min_hourly_customers);
     } ,
 
     simulate_cookies_sales : function(){
@@ -172,7 +172,7 @@ let seattle_shop  = {
 
 
     make_randoms: function (){
-     return  Math.floor(Math.random() * 38);
+     return  Math.floor(Math.random() * (this.max_hourly_customers - this.min_hourly_customers + 1) + this.min_hourly_customers);
     } ,
 
     simulate_cookies_sales : function(){
@@ -225,7 +225,7 @@ let seattle_shop  = {
 
 
     make_randoms: function (){
-     return  Math.floor(Math.random() * 24);
+     return  Math.floor(Math.random() * (this.max_hourly_customers - this.min_hourly_customers + 1) + this.min_hourly_customers);
     } ,
 
     simulate_cookies_sales : function(){
