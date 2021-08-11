@@ -107,13 +107,13 @@ Shops.prototype.dispaly_sales_Hour = function () {
 
 }
 
-Shops.prototype.updateTotalOfTotal = function () {
+Shops.prototype.update_total = function () {
   let removeTable = document.getElementById('total-row');
   removeTable.remove();
 
 };
 
-Shops.prototype.tableNewRowUpdate = function () {
+Shops.prototype.update_table_last_record = function () {
   let TableCont = document.getElementById('table-co');
   console.log(TableCont);
   let tableRow = document.getElementById('total-row');
@@ -178,14 +178,14 @@ formEle.reset();
 
 
  let shop = new Shops(name,max_hourly_customers,min_hourly_customers,average_cookies_sales_per_customer);
-Shops.prototype.updatTable = function(name, maxCustmer, minCustmer, avgCustmer) {
+Shops.prototype.updatTable = function(name, max, min, avg) {
     console.log(all_shops);
 
     shop.dispaly_sales_Hour();
 
-    shop.tableNewRowUpdate();
+    shop.update_table_last_record();
 
-    shop.updateTotalOfTotal();
+    shop.update_total();
 
     shop.renderTotal();
 
