@@ -12,6 +12,34 @@
 <body>
 
     <section id="root"></section>
+    <section id="from__container">
+      
+        <form id="addNewShop">
+            <fieldset>
+                <legend>Add New Shop:</legend>
+
+                <label for="name">Shop Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="min-customers">Minimum Customers</label>
+                <input type="number" min="0" step="any" id="min-customers" name="min-customers" required>
+                
+
+                <label for="max-customers">Maximum Customers</label>
+                <input type="number" min="0" step="any" id="max-customers" name="max-customers" required>
+
+                <label for="average-cookies">Average Cookies Per Sale</label>
+                <input type="number" min="0" step="any" id="average-cookies" name="average-cookies" required>
+
+                <button type="submit" id="submit">Click to Add</button>
+                
+
+            </fieldset>
+        </form>
+
+            
+
+    </section>
     <script src="js/app.js"></script>
     
 </body>
