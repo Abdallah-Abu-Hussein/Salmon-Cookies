@@ -1,12 +1,12 @@
 'use strict';
-
-
 let all_shops = [];
 let workingHours = ['06:00 am','07:00 am','08:00 am','09:00 am','10:00 am','11:00 am','12:00 pm','01:00 pm','02:00 pm','03:00 pm','04:00 pm','05:00 pm','06:00 pm','07:00 pm'];
 
+let formSubmit = document.getElementById('submit');
+let formEle = document.getElementById('addNewShop');
 let rootElement = document.getElementById('root');
 let MainTable = document.createElement('table'); 
-rootElement.appendChild(MainTable);
+MainTable.setAttribute('id', 'table-co')
 
 function Shops(name,max_hourly_customers,min_hourly_customers,average_cookies_sales_per_customer){
   this.name = name;
@@ -35,12 +35,12 @@ Shops.prototype.dispaly_sales_Hour = function () {
   
       };
     }
+
  Shops.prototype.renderheader = function () {
  
  let header = document.createElement('tr');
  MainTable.appendChild(header);
  rootElement.appendChild(MainTable);
-
  let cl_Header = document.createElement('th');
  header.appendChild(cl_Header);
 
@@ -79,6 +79,7 @@ Shops.prototype.dispaly_sales_Hour = function () {
   let footer = document.createElement('tr');
   MainTable.appendChild(footer);
   let cl_Cell = document.createElement('th');
+  footer.setAttribute('id','total-row');
   footer.appendChild(cl_Cell);
   cl_Cell.textContent = ('Total');
   let totalOfTotal = 0;
@@ -105,6 +106,35 @@ Shops.prototype.dispaly_sales_Hour = function () {
   cl_Cell.textContent = totalOfTotal;
 
 }
+
+Shops.prototype.updateTotalOfTotal = function () {
+  let removeTable = document.getElementById('total-row');
+  removeTable.remove();
+
+};
+
+Shops.prototype.tableNewRowUpdate = function () {
+  let TableCont = document.getElementById('table-co');
+  console.log(TableCont);
+  let tableRow = document.getElementById('total-row');
+  let body = document.createElement('tr');
+  console.log(tableRow); 
+  TableCont.insertBefore(body ,tableRow);
+
+  let cl_Header = document.createElement('td');
+  body.appendChild(cl_Header);
+  cl_Header.textContent = (this.name);
+
+  for (let i = 0; i < this.sales_per_hour.length; i++) {
+    cl_Header = document.createElement('td');
+    body.appendChild(cl_Header);
+    cl_Header.textContent = (this.sales_per_hour[i]);
+  }
+  cl_Header = document.createElement('td');
+  body.appendChild(cl_Header);
+  cl_Header.textContent = (this.total_sales);
+
+};
 
 
 
@@ -134,3 +164,38 @@ lima.dispaly_sales_Hour();
 lima.renderBody();
 
 lima.renderTotal();
+
+
+
+formEle.addEventListener('submit', function(event){
+ event.preventDefault();
+
+ let name = document.getElementById('name').value;
+ let min_hourly_customers = document.getElementById('min-customers').value;
+ let max_hourly_customers = document.getElementById('max-customers').value;
+ let average_cookies_sales_per_customer = document.getElementById('average-cookies').value;
+formEle.reset();
+
+
+ let shop = new Shops(name,max_hourly_customers,min_hourly_customers,average_cookies_sales_per_customer);
+Shops.prototype.updatTable = function(name, maxCustmer, minCustmer, avgCustmer) {
+    console.log(all_shops);
+
+    shop.dispaly_sales_Hour();
+
+    shop.tableNewRowUpdate();
+
+    shop.updateTotalOfTotal();
+
+    shop.renderTotal();
+
+  };
+
+  shop.updatTable();
+});
+
+
+
+
+
+

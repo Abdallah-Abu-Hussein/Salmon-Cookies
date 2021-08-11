@@ -12,3 +12,10 @@
   #hi {
     color: red;
   }
+ Form {
+    text-align: center;
+    padding-top: 50px;
+    width: 10%;
+    float:inherit;
+ 
+}
