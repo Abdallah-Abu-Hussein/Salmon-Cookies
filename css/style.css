@@ -149,4 +149,12 @@ footer {
   color:white;
   text-align:center;
   font-size:30px;
+
+
+ Form {
+    text-align: center;
+    padding-top: 50px;
+    width: 10%;
+    float:inherit;
+ 
 }
