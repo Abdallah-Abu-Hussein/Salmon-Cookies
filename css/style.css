@@ -1,17 +1,156 @@
-* {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Amatic+SC&family=Caveat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');    
+
+  body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+
+   header {
+    padding: 400px 0px 400px;
+    width: 100%;
+    background-image: url(https://external-preview.redd.it/mtZWy2bP02JpMkM47anQIMQcf5xcAm-IVpAIiEUkHFc.jpg?auto=webp&s=f84d35a6bc78cef6efe681f6ac182336d1105c3d);
   }
-  img {
-    width: 100px;
-  }
-  table,
-  th,
-  td {
-    border: 1px solid red;
-  }
-  #hi {
-    color: red;
-  }
+
+header nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header nav li { 
+  float: left;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  
+}
+li a{
+  text-decoration: none;
+  color:black;
+  font-family: 'Carter One', serif;
+  font-size: 32px;
+  box-shadow: 5px 0px 0px;
+  padding: 10px;
+}
+li a:hover{
+  background-color: yellow;
+
+}
+.topleft {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+header  h1{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 18px;
+  font-family: 'Tangerine', serif;
+  font-size: 120px;
+}
+header img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 4px;	
+  width: 150px;			
+  height: auto;
+}
+
+header button {
+  position: absolute;
+  top: 100px;
+  right: 18px;
+  margin-top: 15px;
+  background-color:rgb(94, 73, 17);
+  letter-spacing: 1px;
+  padding: 5px 20px;
+  color: #fff;
+  border-radius: 100px;
+  height: 40px;
+  width: 150px;
+  font-family: 'Inter', sans-serif;
+}
+header button a{
+  font-size: larger;
+  text-decoration: none;
+  font-weight: 400;
+  color:whitesmoke;
+  font-family:Georgia, 'Times New Roman', Times, serif
+
+}
+header button a {
+  text-decoration: none;
+}
+main {
+  background-color:rgb(0, 53, 53);
+}
+section img{
+  padding-top:5% ;
+  width: 600px;	
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+section h3 {
+  color:brown;
+  text-align: center;
+  font-size:130px;
+  margin-bottom:0%;
+  margin-top:0% ;
+}
+section p{
+  color:white;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align:justify;
+  font-size:20px;
+  font-family: 'Schoolbell';
+}
+main div {
+  background-color:rgb(0, 53, 53);
+  padding-top: 0%;
+  color:white;
+  text-align:center;
+  list-style:inside;
+}
+main>div>h3{
+  font-size:  200px;;
+  font-weight:bold;
+  margin-bottom:0%;
+  margin-top:0% ;
+  color:goldenrod;
+}
+main div ul{
+  font-size:30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+main div ul:last-child {
+  font-size:30px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 0%;
+}
+footer {
+  padding-top:5%;
+  padding-bottom:5%;
+  background-color:rgb(0, 0, 0);
+  color:white;
+  text-align:center;
+  font-size:30px;
+
+
  Form {
     text-align: center;
     padding-top: 50px;
